@@ -21,6 +21,8 @@ To initialize the linked list, I will need to create a variable of the type Node
 
 ![image](https://github.com/dudareolon/CS260_Assignment_04/assets/102680672/41a0a5e8-25f1-4ad8-b22c-5d443edb784a)
 
+As we add more nodes to the linked list the head node will not be pointing to nullptr anymore.
+
 
 
 
