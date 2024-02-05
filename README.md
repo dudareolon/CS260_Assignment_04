@@ -17,5 +17,12 @@ A node has a slot for the data stored and a slot for the adress of the next node
 
 ![image](https://github.com/dudareolon/CS260_Assignment_04/assets/102680672/c0daa417-4969-4db2-83c6-c2f76aa93582)
 
+To initialize the linked list, I will need to create a variable of the type Node pointer, in other words, use the pointer part of the Node struct and not the data part yet (the node will start empty). Then set this node to point to nullptr since there is nothing else on the linked list. After this point the linked list will look like this:
+
+![image](https://github.com/dudareolon/CS260_Assignment_04/assets/102680672/41a0a5e8-25f1-4ad8-b22c-5d443edb784a)
+
+
+
+
 
 
