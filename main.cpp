@@ -64,4 +64,28 @@ class LinkedList {
             ptr_newNode->next = head; // then the new node will point to the head 
             head = ptr_newNode; // and the head pointer is updated to point to to new node address
 
+        } else {
+            Node* iteration_ptr_2 = head; // creates another pointer for the iteration that will start pointing at the head node
+
+            // for loop to check if the inserted position is actually a positing in the list
+            for (int i = 0; i < position - 1; ++i) { // only needs to go to position-1 because we will be iterating on the nodes 'next' addresses and the address of the 
+                                                     // node on the inserted position is stored on the node that comes before it
+                                                     // we need the address of the node in the position in order to change its data and its next address
+                if (iteration_ptr_2->next == nullptr) { // if position-1 points to nullptr, aka is the last node of the list
+                    cout << "The position you entered is too big for this list" << endl;
+                    return;
+                }
+                iteration_ptr_2 = iteration_ptr_2->next;
+            }
+
+
+            // After the for loop iteration_ptr_2 has the address of the node that comes before the node in the inserted position 
+            // the node at position-1 points ('next') to the node at the position
+            // the new node 'next' address then becomes the position-1 'next' address, so the new node now points at node that was at this position 
+            ptr_newNode->next = iteration_ptr_2->next;
+            // and the node at position-1 is updated to point at the new node
+            iteration_ptr_2->next = ptr_newNode;
+        }
+    }
+
 };
