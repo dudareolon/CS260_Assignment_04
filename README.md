@@ -47,6 +47,14 @@ Desing of the remove function:
 
 Figure 6
 
+Design of the get function:
+
+![image](https://github.com/dudareolon/CS260_Assignment_04/assets/102680672/10b8e1b4-f1ae-4813-87e9-7ed2c0c0314a)
+
+Figure 7
+
+The get function could have been as short as three lines long, if it was not for the user input checks that I did.
+
 
 
 
