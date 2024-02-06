@@ -89,3 +89,16 @@ class LinkedList {
     }
 
 };
+
+int main() {
+    // create a list under the linked list class
+    LinkedList myList;
+
+    myList.add(15, 5);
+    myList.add(10, 0);
+    myList.add(20, 1);
+    myList.add(30, 1);
+    myList.add(30, 5);
+
+    return 0;
+}
