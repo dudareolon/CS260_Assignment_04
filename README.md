@@ -41,7 +41,11 @@ Design of the add function:
 
 Figure 5
 
+Desing of the remove function:
 
+![image](https://github.com/dudareolon/CS260_Assignment_04/assets/102680672/1f7712c2-16e0-414c-a199-43067472d129)
+
+Figure 6
 
 
 
