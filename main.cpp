@@ -26,18 +26,18 @@ class LinkedList {
     LinkedList() : head(nullptr) {} // constructed a Linked List that has the pointer head with the address of nullptr
 
     // This function checks if the linked list is empty so that my other functions are more readable
-    bool isEmpty() { // it returns true or false
+    bool isEmpty()const { // it returns true or false
         return head == nullptr; // if the head pointer is pointing to nullptr that means that there are no nodes and the list is empty
     }
 
     // This function checks if the value inserted is a positive integer or 0
     // Linked lists do not have negative positions, they start from 0 until n, increasing by 1
-    bool isValid(int position) {
+    bool isValid(int position) const {
         return position >= 0; // return true if position is an integer bigger or equal to 0
     }   
 
     // This function prints the linked list and it is mostly used for testing
-    void printList() {
+    void printList() const{
         Node* iteration_ptr = head; //creates a pointer for the iteration, initially it stores the address of the head of the list
         // repeats while the iteration_ptr is not pointing to the last node of the list
         while (iteration_ptr != nullptr) { // the last node on the list points to nullptr as we defined on the add function
@@ -131,6 +131,28 @@ class LinkedList {
         return removedValue;
     }
 
+    // Function to get the value at a specific position without removing it
+    int get(int position) const { 
+        if (!isValid(position) || isEmpty()) { // this if check is the same as the one in the remove function
+            cout << "the position you entered is not a positive integer or 0, or the list is empty" << endl;
+            return 0; 
+        }
+
+        Node* iteration_ptr_3 = head; // iteration pointer is initialized with the address of head, which is the first node in the list
+        for (int i = 0; i < position; ++i) {
+            // this iteration goes from 0 until the inserted position, different than the one used on the add and on the remove functions
+                if (iteration_ptr_3->next == nullptr) { 
+                cout << "The position you entered is too big for this list" << endl;
+                return 0;
+            }
+            iteration_ptr_3 = iteration_ptr_3->next;
+        }
+
+        // at the end of the for loop the iteration pointer has the address of the node we want to get
+        // return the data of this node
+        return iteration_ptr_3->data;
+    }
+
 
 };
 
@@ -151,5 +173,7 @@ int main() {
     cout << "List after removal: ";
     myList.printList();
 
+    int getValue = myList.get(1);
+    cout << "the value in the linked list at the position you entered is: " << getValue;
     return 0;
 }
