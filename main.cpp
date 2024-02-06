@@ -6,6 +6,9 @@
 
 #include <iostream>
 
+using std::cout;
+using std::endl;
+
 // The node struct defines what a 'data structure' node is
 struct Node {
     int data; // a node is formed of a slot for the data
@@ -28,5 +31,37 @@ class LinkedList {
     bool isValid(int position) {
         return position >= 0; // return true if position is an integer bigger or equal to 0
     }   
+
+    // This function prints the linked list and it is mostly used for testing
+    void printList() {
+        Node* iteration_ptr = head; //creates a pointer for the iteration, initially it stores the address of the head of the list
+        // repeats while the iteration_ptr is not pointing to the last node of the list
+        while (iteration_ptr != nullptr) { // the last node on the list points to nullptr as we defined on the add function
+            cout << iteration_ptr->data << " "; // display the data of each node in the list
+            iteration_ptr = iteration_ptr->next; // update the iteration pointer to point to the next node
+        }
+    }
+
+    // This function adds a given value at a specific given position in the list
+    void add(int value, int position) {
+        // Test if the position given is a positive integer
+        if (!isValid(position)) { // ! means 'is not'
+            cout << "The position you inserted is not a positive integer, therefore is invalid and the value can't be added" << endl;
+            return; // leave the function after sending error message
+        }
+
+        // Create the new node
+        Node* ptr_newNode = new Node; // "new Node" allocates a memory location on the heap for an instance of a Node object
+                                      // "Node* ptr_newNode" creates a pointer that stores the address of the "new Node" 
+        ptr_newNode->data = value; // in the address of the new Node the data slot becomes the value
+        ptr_newNode->next = nullptr; // and in that same address, the next slot becomes nullptr
+        // The new node needs to point to something when initialized otherwise the system will point it to garbage data
+        // since we do not know yet where this node will be in the list, point it to nullptr
+        // ptr_newNode = address of the new node
+
+        // check if the 
+        if (position == 0 || isEmpty()) { // check if the position inserted is 0 or if the list is empty
+            ptr_newNode->next = head; // then the new node will point to the head 
+            head = ptr_newNode; // and the head pointer is updated to point to to new node address
 
 };
