@@ -131,7 +131,7 @@ class LinkedList {
         return removedValue;
     }
 
-    // Function to get the value at a specific position without removing it
+    // This function gets the value at a specific input location without removing it
     int get(int position) const { 
         if (!isValid(position) || isEmpty()) { // this if check is the same as the one in the remove function
             cout << "the position you entered is not a positive integer or 0, or the list is empty" << endl;
@@ -160,20 +160,44 @@ int main() {
     // create a list under the linked list class
     LinkedList myList;
 
-    //myList.add(15, 5);
+    // Test 1:
+    // test if the add function is working properly:
     myList.add(10, 0);
     myList.add(20, 1);
-    myList.add(30, 1);
-    myList.add(30, 5);
-
+    myList.add(30, 1); // this will shift 20 to the right and 30 will be stored in the spot 1
+    cout << "List after initial adds: ";
     myList.printList();
+    cout << endl;
+    // Output:
+    // List after initial adds: 10 30 20 
+    // Correct 
+
+
+    // Test 2:
+    // test if the remove function works properly
     int removedValue = myList.remove(2);
-    cout << "Removed value: " << removedValue << endl;
-
-    cout << "List after removal: ";
+    cout << "Removed value: " << removedValue << endl; // the value on the slot number 2 must be removed and the list that had 3 elements will now have 2
+    cout << "List after removing the value: ";
     myList.printList();
+    cout << endl;
+    // Output:
+    // Removed value: 20
+    // List after removing the value: 10 30 
+    // Correct
 
+
+    // Test 3:
+    // test if the get function works
     int getValue = myList.get(1);
-    cout << "the value in the linked list at the position you entered is: " << getValue;
+    cout << "The value in the linked list at the position you entered is: " << getValue << endl;
+    // Output:
+    // The value in the linked list at the position you entered is: 30
+    // Correct
+
+    // Test 4:
+
+    // Test 5:
+
+
     return 0;
 }
