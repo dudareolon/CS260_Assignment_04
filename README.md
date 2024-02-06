@@ -29,6 +29,14 @@ Figure 3
 
 As we add more nodes to the linked list the head node will not be pointing to nullptr anymore. On figure 2, node 1 represents the Head Node. 
 
+Big picture desing of the class:
+
+![image](https://github.com/dudareolon/CS260_Assignment_04/assets/102680672/b1140f76-70ad-4cd3-90c9-107afb92391f)
+
+Figure 4
+
+
+
 
 
 
