@@ -22,6 +22,9 @@ class LinkedList {
     // Create an empty list
     Node* head; // A node with no inserted data but points to the head of the list
 
+    // A constructor (ctor) is a special type of function called to create an object, it prepares the new object for use, such as letting it receive input arguments
+    LinkedList() : head(nullptr) {} // constructed a Linked List that has the pointer head with the address of nullptr
+
     // This function checks if the linked list is empty so that my other functions are more readable
     bool isEmpty() { // it returns true or false
         return head == nullptr; // if the head pointer is pointing to nullptr that means that there are no nodes and the list is empty
