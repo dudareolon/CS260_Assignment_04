@@ -18,6 +18,7 @@ struct Node {
 // The Linked List class defines the linked list and its functions
 class LinkedList {
 
+    public:
     // Create an empty list
     Node* head; // A node with no inserted data but points to the head of the list
 
