@@ -77,5 +77,14 @@ Requirement 3: a get function that takes a position and returns that value witho
 
 Figure 10
 
+---------------------------------------------------------------------------------------------------
 
+Complexity Analyzis:
+
+To make this analyzis easier I will use again the picture I used on my assignmnet last week:
+
+![image](https://github.com/dudareolon/CS260_Assignment_04/assets/102680672/3282ef21-4489-4954-8f03-e4bd525a6b96)
+
+Las week my program had no loops, nested loops or etc, so it was linear. Which menas it was under the O(1) notation. 
+This week however, the three main functions of my code (get, remove, and add) have for or while loops in them. So during these parts of my code I have a O(n) notation, being that n is the amount of times the loop repeats itself. For the other lines of my code it is linear so still under the O(1) notation. Most of the loops on my program were used to check for the quality of user inputs, and did not need to be as complex as they were if I had only done what the prompt of the assignment asked for. 
 
