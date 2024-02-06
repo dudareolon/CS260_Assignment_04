@@ -195,9 +195,21 @@ int main() {
     // Correct
 
     // Test 4:
-
-    // Test 5:
-
+    // test if the functions display error messages correctly
+    myList.get(6);
+    myList.get(-6);
+    myList.add(20, 15);
+    myList.add(20, -15);
+    myList.remove(300);
+    myList.remove(-300);
+    // Output:
+    // The position you entered is too big for this list
+    // the position you entered is not a positive integer or 0, or the list is empty
+    // The position you entered is too big for this list
+    // The position you inserted is not a positive integer, therefore is invalid and the value can't be added
+    // The position you entered is too big for this list
+    // the position you entered is not a positive integer or 0, or the list is empty
+    // Correct
 
     return 0;
 }
