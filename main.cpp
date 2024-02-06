@@ -92,6 +92,46 @@ class LinkedList {
         }
     }
 
+    // This function removes the value at a given location
+    int remove(int position) { 
+        if (!isValid(position) || isEmpty()) { //check if input is no valid or if the list is empty
+            cout << "the position you entered is not a positive integer or 0, or the list is empty" << endl;
+            return 0;
+        }
+
+        int removedValue; // variable that will store the deleted value to be returned
+
+        // check if the position inserted is 0
+        // If position==0 then the node that needs to be removed is the node head is pointing to
+        if (position == 0) {
+            Node* ptr_removedNode = head; // now ptr_removedNode has the address of the head pointer
+            head = head->next; // head is updated to store the address of the next node
+            removedValue = ptr_removedNode->data; // data of removed node is stored in the variable that will be returned
+
+
+        } else {
+            Node* iteration_ptr_2 = head; // same iteration as the add function for the same reasons
+            for (int i = 0; i < position - 1; ++i) {
+
+                if (iteration_ptr_2->next == nullptr) { // if position-1 points to nullptr, aka is the last node of the list
+                    cout << "The position you entered is too big for this list" << endl;
+                    return 0;
+                }
+
+                iteration_ptr_2 = iteration_ptr_2->next; 
+            }
+
+            // at the end of the loop, the iteration pointer has the address of position - 1 
+
+            Node* ptr_removedNode = iteration_ptr_2->next; // create a pointer that stores the value of the node to be removed
+            iteration_ptr_2->next = ptr_removedNode->next; // Update the nodes so that position -1 node's 'next' value is the 'next' value of the node removed. 
+            removedValue = ptr_removedNode->data; 
+        }
+
+        return removedValue;
+    }
+
+
 };
 
 int main() {
@@ -104,6 +144,11 @@ int main() {
     myList.add(30, 1);
     myList.add(30, 5);
 
+    myList.printList();
+    int removedValue = myList.remove(2);
+    cout << "Removed value: " << removedValue << endl;
+
+    cout << "List after removal: ";
     myList.printList();
 
     return 0;
