@@ -35,7 +35,11 @@ Big picture desing of the class:
 
 Figure 4
 
+Design of the add function:
 
+![image](https://github.com/dudareolon/CS260_Assignment_04/assets/102680672/0e7222ae-b8e1-4527-be30-dd72b369570a)
+
+Figure 5
 
 
 
