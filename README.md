@@ -55,6 +55,27 @@ Figure 7
 
 The get function could have been as short as three lines long, if it was not for the user input checks that I did.
 
+---------------------------------------------------------------------------------------------------
+
+The parts of the code where I meet each one of the requirements are the following:
+
+Requirement 1: an add function that takes a value and inserts it into a given position into the list:
+
+![image](https://github.com/dudareolon/CS260_Assignment_04/assets/102680672/b391c4eb-5583-44ed-b861-5e4c99ccf0cf)
+
+Figure 8
+
+Requirement 2: a remove function that takes a position and removes the value stored at that position of the list and returns it:
+
+![image](https://github.com/dudareolon/CS260_Assignment_04/assets/102680672/1605c6cc-4ac8-4e97-a1ac-a56085278f9d)
+
+Figure 9
+
+Requirement 3: a get function that takes a position and returns that value without removing it:
+
+![image](https://github.com/dudareolon/CS260_Assignment_04/assets/102680672/68dff05b-e0c7-4cf3-b5be-ed26133d4979)
+
+Figure 10
 
 
 
